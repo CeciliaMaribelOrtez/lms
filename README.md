@@ -1,12 +1,13 @@
-# library Managenent System
+# Library Management System
 
-## Descripcion
+## Descripción
 
-## Instalacion
+## Requerimientos
+
+## Instalación
 
 ## Uso
- 
-## Creditos
 
+## Creditos
 
 ## Licencia
