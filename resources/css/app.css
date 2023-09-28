@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+section > form select {
+    @apply text-gray-500 rounded-md shadow-sm p-2;
+}
+
+section > form {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-4;
+}
+.form-footer{
+    @apply col-span-2 border-t-2 border-ugreen-500 bg-gradient-to-b from-ugreen-200 to-ugreen-300 flex justify-end items-center gap-4 px-4 py-2 rounded-b-lg -m-6 mt-4;
+}

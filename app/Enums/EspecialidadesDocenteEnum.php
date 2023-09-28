@@ -4,21 +4,18 @@ namespace App\Enums;
 
 enum EspecialidadesDocenteEnum: int
 {
-    case INFORMATICA = 1;
-    case AGROPECUARIA = 2;
-    case IDIOMAS = 3;
-    case CIENCIAS_ECONOMICAS = 4;
-    case CIENCIAS_ADMINISTRATIVAS = 5;
-    case CIENCIAS_DE_LA_SALUD = 6;
-    case CIENCIAS_JURIDICAS = 7;
-    case CIENCIAS_DE_LA_EDUCACION = 8;
+    case BACHILLER = 1;
+    case LICENCIADO = 2;
+    case INGENIERO = 3;
+    case MASTER = 4;
+    case DOCTOR = 5;
 
-    public static function getName(int $value): string{
-        foreach (self::cases() as $case){
-            if($case->value === $value){
+    public static function getName(int $value): string {
+        foreach (self::cases() as $case) {
+            if ($case->value === $value) {
                 return $case->name;
             }
         }
-        throw new \InvalidArgumentException("value not found in the Enum");
+        throw new \InvalidArgumentException("Value not found in the Enum");
     }
 }

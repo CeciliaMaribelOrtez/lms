@@ -1,0 +1,10 @@
+{
+    "printWidth": 120,
+    "singleQuote": true ,
+    "tabWidth": 4,
+    "wrapAttributes": "auto",
+    "sortTailwindcssClasses": true,
+    "sortHtmlAttributes": "none",
+    "noPhpSyntaxCheck": false,
+    "plugins": ["@shufo/prettier-plugin-blade"]
+}

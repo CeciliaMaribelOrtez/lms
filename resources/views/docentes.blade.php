@@ -1,34 +1,31 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
-            Gestionar docentes
-        </h2>
+        <div class="flex items-center justify-between">
+            <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
+                Gestionar docentes
+            </h2>
+
+            <a href="{{ route('docentes.create') }}"
+                class="rounded-md bg-ugreen-500 p-2 text-white hover:bg-ugreen-400 active:bg-ugreen-700">
+                @svg('typ-plus', 'inline w-5 h-5 mr-2')
+                Agregar docente
+            </a>
+        </div>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-6">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <!-- Show a session flash message -->
             @if (session()->has('message'))
-                <div
-
-                    x-data="{show: true}"
-                    x-init="setTimeout(() => show = false, 3000)"
-                    x-show="show"
-
-                    class="p-3 mb-2 font-bold text-center text-white rounded-md bg-ublue-500">
+                <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 3000)" x-show="show"
+                    class="mb-2 rounded-md bg-ublue-500 p-3 text-center font-bold text-white">
                     {{ session('message') }}
                 </div>
             @endif
 
-            <div class="flex items-center justify-end mb-2">
-                <a href="{{ route('docentes.create') }}"
-                   class="p-2 text-white rounded-md bg-ugreen-500 hover:bg-ugreen-400 active:bg-ugreen-700">
-                    Agregar docente
-                </a>
-            </div>
             <div class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <livewire:docentes-table>
+                    <livewire:docentes-table />
                 </div>
             </div>
         </div>
