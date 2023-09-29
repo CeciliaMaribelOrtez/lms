@@ -113,7 +113,7 @@
             <x-input-label for="tipo_atencion" :value="__('Tipo de atención')"/>
             <select wire:model.defer="atencion.tipo_atencion" id="tipo_atencion" name="tipo_atencion" class="block w-full mt-1" required>
                 <option value="">Seleccione el tipo de la atención</option>
-                @foreach (\App\Enums\MotivosDocentesEnum::cases() as $key => $cat)
+                @foreach (\App\Enums\TiposDeAtencionEnum::cases() as $key => $cat)
                     <option value="{{ $cat->value }}">{{ self::transform($cat->name) }}</option>
                 @endforeach
             </select>

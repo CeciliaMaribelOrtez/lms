@@ -51,7 +51,6 @@ class EditForm extends Component
             'atencion.tipo_atencion' => 'required',
             'atencion.nivel' => 'sometimes',
             'atencion.atencionable_id' => 'required',
-            'tipo_atencion' => 'required',
         ];
     }
 
