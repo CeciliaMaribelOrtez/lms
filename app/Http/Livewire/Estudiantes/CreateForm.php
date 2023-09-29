@@ -10,7 +10,7 @@ class CreateForm extends Component
 {
     use HasUtilsUML;
 
-    public $estudiante;
+    public $docente;
 
     public function mount()
     {

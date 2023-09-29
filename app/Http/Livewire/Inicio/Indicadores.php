@@ -6,6 +6,7 @@ use Livewire\Component;
 
 class Indicadores extends Component
 {
+    public $chart;
     public $items = [
         '\App\Models\Libro' => [
             'label' => 'Libros',
@@ -28,6 +29,10 @@ class Indicadores extends Component
             'icon' => 'typ-tags',
         ],
     ];
+
+    public function mount(){
+
+    }
 
     public function render()
     {

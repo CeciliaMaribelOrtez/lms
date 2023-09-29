@@ -29,7 +29,7 @@
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main class='mb-12'>
                 {{ $slot }}
             </main>
         </div>

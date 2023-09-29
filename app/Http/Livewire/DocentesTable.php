@@ -30,8 +30,8 @@ class DocentesTable extends DataTableComponent
     {
         return [
             Column::make('Id', 'id')->sortable(),
-            Column::make('Nombres', 'nombres')->sortable(),
-            Column::make('Apellidos', 'apellidos')->sortable(),
+            Column::make('Nombres', 'nombres')->searchable(),
+            Column::make('Apellidos', 'apellidos')->searchable(),
             /*Column::make('Celular', 'celular')->sortable(),
             Column::make('Correo', 'correo')->sortable(),
             Column::make('Grado', 'grado')

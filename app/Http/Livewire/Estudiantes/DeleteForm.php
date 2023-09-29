@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class DeleteForm extends Component
 {
-    public $estudiante;
+    public $docente;
 
     public function mount()
     {

@@ -93,10 +93,16 @@ class AtencionesTable extends DataTableComponent
                     }
                 }),
 
-            DateFilter::make('Fecha')
+            DateFilter::make('Fecha de inicio ')
                 ->filter(function (Builder $builder, string $value) {
-                    $builder->where('fecha', $value);
+                    $builder->whereDate('fecha', '>=', $value);
                 }),
+
+            DateFilter::make('Fecha de fin ')
+                ->filter(function (Builder $builder, string $value) {
+                    $builder->whereDate('fecha', '<=', $value);
+                }),
+
 
             SelectFilter::make('Tipo de Usuario')
                 ->options([
